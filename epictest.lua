@@ -10,39 +10,55 @@ FAM_GUID = "34d3af"               -- Familiar Deck
 LEG_GUID = "221bc2"               -- Legend Deck
 ABILITY_GUID = "f57c85"           -- Ability Cards
 DW_GUID = "4d0534"                -- Dead Wizard Token Bag
-COUNT_BAG = "d04e31"              -- Counting Bag
 TROPHY_GUID = "67c0f8"
+LINEUP_ZONES = {
+    "5613be",
+    "fcc8e2",
+    "41e75e",
+    "151370",
+    "55832b"
+}
 
 -- ### Player Setup ###
 PLAYER_DECKS = {
-    Red = "228b3c", White = "c980bc", Purple = "8f2573", Blue = "d97e5b", Green = "61cb4d"
+    Red = "cf9daa", White = "6eaa81", Purple = "416a28", Blue = "fef5a9", Green = "a2593d"
 }
 
 PLAYERS = {
     Red = {
+        buttonHost = "8d8f38",
         deckArea = "8d4eea", discardArea = "d258e2", playArea = "88a4e4", color = "Red",
-        endButton = { position = { x=0, y=-0.3, z=-0.8 }, height = 125, width = 375, label = "End Turn", font_size = 80, rotation = {0,180,0} },
-        drawButton = { position = { x=0, y=-0.3, z=-0.8 }, height = 125, width = 375, label = "Draw 1", font_size = 80, rotation = {0,180,0} }
+        deckPos = {x = -6.32, y = 1.06, z = -28.41},
+        endButton = { position = { x=0, y=3.3, z=-0.4 }, height = 175, width = 700, label = "End Turn", font_size = 120, rotation = {0,0,0} },
+        drawButton = { position = { x=0, y=3.3, z=-1.2 }, height = 175, width = 700, label = "Draw 1", font_size = 120, rotation = {0,0,0} }
     },
     White = {
+        buttonHost = "ac291f",
         deckArea = "e61acc", discardArea = "f46c7c", playArea = "ab41ee", color = "White",
-        endButton = { position = { x=0, y=-0.3, z=-0.8 }, height = 125, width = 375, label = "End Turn", font_size = 80, rotation = {0,180,0} },
-        drawButton = { position = { x=0, y=-0.3, z=-0.8 }, height = 125, width = 375, label = "Draw 1", font_size = 80, rotation = {0,180,0} }
+        deckPos = {x = 32.97, y = 1.06, z = -28.58},
+        endButton = { position = { x=0, y=3.3, z=-0.4 }, height = 175, width = 700, label = "End Turn", font_size = 120, rotation = {0,0,0} },
+        drawButton = { position = { x=0, y=3.3, z=-1.2 }, height = 175, width = 700, label = "Draw 1", font_size = 120, rotation = {0,0,0} }
     },
     Purple = {
+        buttonHost = "1a4578",
         deckArea = "b743de", discardArea = "537759", playArea = "a7ca9f", color = "Purple",
-        endButton = { position = { x=0, y=-0.3, z=-0.8 }, height = 125, width = 375, label = "End Turn", font_size = 80, rotation = {0,180,0} },
-        drawButton = { position = { x=0, y=-0.3, z=-0.8 }, height = 125, width = 375, label = "Draw 1", font_size = 80, rotation = {0,180,0} }
+        deckPos = {x = 46.27, y = 1.06, z = 9.86},
+        endButton = { position = { x=0, y=3.3, z=-0.4 }, height = 175, width = 700, label = "End Turn", font_size = 120, rotation = {0,0,0} },
+        drawButton = { position = { x=0, y=3.3, z=-1.2 }, height = 175, width = 700, label = "Draw 1", font_size = 120, rotation = {0,0,0} }
     },
     Blue = {
+        buttonHost = "deb4a0",
         deckArea = "b47f6b", discardArea = "cb514e", playArea = "07ba1f", color = "Blue",
-        endButton = { position = { x=0, y=-0.3, z=-0.8 }, height = 125, width = 375, label = "End Turn", font_size = 80, rotation = {0,180,0} },
-        drawButton = { position = { x=0, y=-0.3, z=-0.8 }, height = 125, width = 375, label = "Draw 1", font_size = 80, rotation = {0,180,0} }
+        deckPos = {x = 13.92, y = 1.06, z = 28.78},
+        endButton = { position = { x=0, y=3.3, z=-0.4 }, height = 175, width = 700, label = "End Turn", font_size = 120, rotation = {0,0,0} },
+        drawButton = { position = { x=0, y=3.3, z=-1.2 }, height = 175, width = 700, label = "Draw 1", font_size = 120, rotation = {0,0,0} }
     },
     Green = {
+        buttonHost = "047f5f",
         deckArea = "00d014", discardArea = "f345b9", playArea = "0180f7", color = "Green",
-        endButton = { position = { x=0, y=-0.3, z=-0.8 }, height = 125, width = 375, label = "End Turn", font_size = 80, rotation = {0,180,0} },
-        drawButton = { position = { x=0, y=-0.3, z=-0.8 }, height = 125, width = 375, label = "Draw 1", font_size = 80, rotation = {0,180,0} }
+        deckPos = {x = -25.47, y = 1.06, z = 28.48},
+        endButton = { position = { x=0, y=3.3, z=-0.4 }, height = 175, width = 700, label = "End Turn", font_size = 120, rotation = {0,0,0} },
+        drawButton = { position = { x=0, y=3.3, z=-1.2 }, height = 175, width = 700, label = "Draw 1", font_size = 120, rotation = {0,0,0} }
     }
 }
 
@@ -65,7 +81,8 @@ CHARACTERS = {
     {name="Dungstar the Poo Pope", guid="080fc6", func="selChar_Dungstar"},
     {name="Ball of Cthulu", guid="aafe69", func="selChar_BallOfCthulu"},
     {name="Sir Kitty Purrington", guid="c40bd4", func="selChar_SirKitty"},
-    {name="Fey Ticklebottom", guid="a2c59c", func="selChar_Fey"}
+    {name="Fey Ticklebottom", guid="a2c59c", func="selChar_Fey"},
+    {name="Abraca", guid="e508d0", func="selChar_Abraca"}
 }
 
 -- ### Event Data ###
@@ -143,118 +160,150 @@ function onLoad(saved_data)
     end
 
     -- Initialize Zones
-    print("Initializing card zones...")
     cardZones = {}
     for _, guid in ipairs(CARD_ZONE_GUIDS) do
         local zone = getObjectFromGUID(guid)
         if zone then table.insert(cardZones, zone) else print("ERROR: Card zone not found for GUID: " .. guid) end
     end
 
-    print("Initializing legend zone...")
     lZone = {}
     local legendZoneObject = getObjectFromGUID(LEG_ZONE)
     if legendZoneObject then table.insert(lZone, legendZoneObject) else print("ERROR: Legend zone not found for GUID: " .. LEG_ZONE) end
 
-    print("Creating UI Start Button...")
     -- Create UI Start Button
     UI.setXml([[<Button id="startGameButton" onClick="startGame" text="Start Game" position="0 400 0" height="50" width="200" fontSize="24" />]])
     if gameActive then UI.hide("startGameButton") end
 
-    print("Linking World Action Buttons...")
-    local famButton = getObjectFromGUID("7d4177")
-    if famButton then
-        famButton.setClickable(true)
-        famButton.setClickFunction("getFamiliars")
-        famButton.setFunctionOwner(self)
-        print("Familiar button linked.")
+    local tokenObj = getObjectFromGUID("7d4177")
+    if tokenObj then
+        tokenObj.createButton({
+            label = "Familiar",
+            click_function = "getFamiliars",
+            function_owner = self,
+            position = {0, 0.3, 0},
+            rotation = {0, 180, 0},
+            width = 1500,
+            height = 800,
+            font_size = 360
+        })
+        print("Familiar button created on 7d4177")
     else
-        print("ERROR: Familiar button NOT found for GUID: 7d4177")
+        print("ERROR: Object with GUID 7d4177 not found")
     end
 
-    local legButton = getObjectFromGUID("726a69")
-    if legButton then
-        legButton.setClickable(true)
-        legButton.setClickFunction("legends")
-        legButton.setFunctionOwner(self)
-        print("Legend button linked.")
+    local adminObj = getObjectFromGUID("751cf9")
+    if adminObj then
+        adminObj.createButton({
+            label = "Reset Game",
+            click_function = "resetGame",
+            function_owner = self,
+            position = {0, 0.3, -1.5},
+            width = 1000,
+            height = 400,
+            font_size = 150,
+            color = {1, 0, 0},           -- red
+            font_color = {1,1,1},        -- white text
+        })
     else
-        print("ERROR: Legend button NOT found for GUID: 726a69")
+        print("Admin object not found for reset button.")
     end
 
-    local abilButton = getObjectFromGUID("5be196")
-    if abilButton then
-        abilButton.setClickable(true)
-        abilButton.setClickFunction("getAbility")
-        abilButton.setFunctionOwner(self)
-        print("Ability button linked.")
+        -- Legend Button
+    local legObj = getObjectFromGUID("726a69")
+    if legObj then
+        legObj.createButton({
+            label = "Legend",
+            click_function = "legends",
+            function_owner = self,
+            position = {0, 0.3, 0},
+            rotation = {0, 180, 0},
+            width = 1500,
+            height = 800,
+            font_size = 360
+        })
+        print("Legend button created on 726a69")
     else
-        print("ERROR: Ability button NOT found for GUID: 5be196")
+        print("ERROR: Legend object NOT found for GUID: 726a69")
     end
 
-    local dwButton = getObjectFromGUID("86826c")
-    if dwButton then
-        dwButton.setClickable(true)
-        dwButton.setClickFunction("dWToken")
-        dwButton.setFunctionOwner(self)
-        print("DW Tokens button linked.")
+    -- Ability Button
+    local abilObj = getObjectFromGUID("5be196")
+    if abilObj then
+        abilObj.createButton({
+            label = "Ability",
+            click_function = "getAbility",
+            function_owner = self,
+            position = {0, 0.3, 0},
+            rotation = {0, 180, 0},
+            width = 1500,
+            height = 800,
+            font_size = 360
+        })
+        print("Ability button created on 5be196")
     else
-        print("ERROR: DW Tokens button NOT found for GUID: 86826c")
+        print("ERROR: Ability object NOT found for GUID: 5be196")
     end
 
-    print("Creating Player-Specific Buttons...")
     -- Create Player-Specific Buttons
     for color, data in pairs(PLAYERS) do
-        print("Attempting to create buttons for player: " .. color)
-        local deckArea = getObjectFromGUID(data.deckArea)
-        local discardArea = getObjectFromGUID(data.discardArea)
+        local host = getObjectFromGUID(data.buttonHost)
 
-        if deckArea then
-            print("Found deckArea for " .. color .. ": " .. data.deckArea)
+        if host then
+            -- Draw 1
             local drawButton = data.drawButton
             drawButton.click_function = "drawOne" .. color
             drawButton.function_owner = self
-            deckArea.createButton(drawButton)
-            _G["drawOne" .. color] = function(_, player_color) if player_color == color then drawOne(color) end end
-        else
-            print("ERROR: deckArea NOT found for " .. color .. ". GUID: " .. data.deckArea)
-        end
+            host.createButton(drawButton)
+            _G["drawOne" .. color] = function(_, player_color)
+                if player_color == color then drawOne(color) end
+            end
 
-        if discardArea then
-            print("Found discardArea for " .. color .. ": " .. data.discardArea)
+            -- End Turn
             local endButton = data.endButton
             endButton.click_function = "endTurn" .. color
             endButton.function_owner = self
-            discardArea.createButton(endButton)
-            _G["endTurn" .. color] = function(_, player_color) if player_color == color then endTurn(color) end end
+            host.createButton(endButton)
+            _G["endTurn" .. color] = function(_, player_color)
+                if player_color == color then endTurn(color) end
+            end
 
-            -- Add death and trophy buttons here as well
-            discardArea.createButton({label="I Died", click_function="playerDied"..color, function_owner=self, position={-0.5, 0.1, 0}, height=100, width=200, font_size=60})
-            _G["playerDied"..color] = function(_, player_color) if player_color == color then playerDied(color) end end
+            -- I Died
+            host.createButton({
+                label = "I Died",
+                click_function = "playerDied" .. color,
+                function_owner = self,
+                position = {0, 3.3, 0.8},
+                rotation = {0, 0, 0},
+                width = 700,
+                height = 175,
+                font_size = 120
+            })
+            _G["playerDied" .. color] = function(_, player_color)
+                if player_color == color then playerDied(color) end
+            end
 
-            discardArea.createButton({label="I Killed", click_function="getTrophy"..color, function_owner=self, position={0.5, 0.1, 0}, height=100, width=200, font_size=60})
-            _G["getTrophy"..color] = function(_, player_color) if player_color == color then getTrophy(color) end end
+            -- I Killed
+            host.createButton({
+                label = "I Killed",
+                click_function = "getTrophy" .. color,
+                function_owner = self,
+                position = {0, 3.3, 1.2},
+                rotation = {0, 0, 0},
+                width = 700,
+                height = 175,
+                font_size = 120
+            })
+            _G["getTrophy" .. color] = function(_, player_color)
+                if player_color == color then getTrophy(color) end
+            end
         else
-            print("ERROR: discardArea NOT found for " .. color .. ". GUID: " .. data.discardArea)
+            print("ERROR: buttonHost object NOT found for " .. color)
         end
     end
 
-    print("Scheduling setupCharacterButtons.")
     -- Create Character Selection Buttons
     Wait.time(setupCharacterButtons, 1)
 
-    print("Initializing Counting Bag...")
-    -- Initialize Counting Bag
-    local countBag = getObjectFromGUID(COUNT_BAG)
-    if countBag then
-        countBag.createButton({label="", click_function="none", function_owner=self, position={0,0.4,-2.5}, rotation={0,180,0}, height=0, width=0, font_color={1,1,1}, font_size=500})
-        updateValue()
-        if not isActive then
-            isActive = true
-            startLuaCoroutine(self, "updateBag")
-        end
-    else
-        print("ERROR: Counting Bag not found for GUID: " .. COUNT_BAG)
-    end
 end
 
 function onSave()
@@ -271,104 +320,145 @@ end
 ====================================================================================================
 ]]
 
-function startGame(_, player_color, alt_click)
-    if gameActive then return end
+function startGame(_, player_color)
+    if gameActive then
+        print("Game already active.")
+        return
+    end
     gameActive = true
     UI.hide("startGameButton")
+    print("Starting Game...")
 
+    -- Refill Lineup from main deck
     local mainDeck = getObjectFromGUID(DECK_GUID)
     if mainDeck then
         mainDeck.shuffle()
-        refillCards()
+        refillLineup()
+    else
+        print("❌ Main deck not found.")
     end
 
-    for color, guid in pairs(PLAYER_DECKS) do
-        local playerDeck = getObjectFromGUID(guid)
-        if playerDeck and playerDeck.tag == "Deck" then
-            playerDeck.shuffle()
-            drawCards(PLAYERS[color], 5)
+    -- Deal cards to each seated player's hand
+    for color, player in pairs(PLAYERS) do
+        if Player[color] and Player[color].seated then
+            drawCards(player, 5)
         end
     end
+end
+
+function resetGame(_, player_color)
+    gameActive = false
+    UI.show("startGameButton")
+    print("Game has been reset by " .. player_color)
 end
 
 function endTurn(playerColor)
     local player = PLAYERS[playerColor]
+    if not player then return end
+
     discardHand(player)
     discardPlayed(player)
-    Wait.time(function() drawCards(player, 5) end, 0.5)
+
+    Wait.time(function()
+        drawCards(player, 5)
+        refillLineup()
+    end, 0.5)
 end
 
 function drawOne(playerColor)
     local player = PLAYERS[playerColor]
+    if not player then return end
     drawCards(player, 1)
 end
 
 function discardHand(player)
-    local playerCards = Player[player.color].getHandObjects()
-    local discardArea = getObjectFromGUID(player.discardArea)
-    if not discardArea then return end
-
-    for _, card in ipairs(playerCards) do
-        card.use_hands = false
-        card.setPositionSmooth(discardArea.getPosition(), false, true)
-        Wait.time(function() card.use_hands = true end, 0.2)
+    local hand = Player[player.colour].getHandObjects()
+    for _, card in ipairs(hand) do
+        card.setPositionSmooth(player.discardArea.getPosition())
     end
 end
 
 function discardPlayed(player)
-    local playArea = getObjectFromGUID(player.playArea)
-    local discardArea = getObjectFromGUID(player.discardArea)
-    if not playArea or not discardArea then return end
-
-    local playedCards = playArea.getObjects()
-    for _, card in ipairs(playedCards) do
-        if card.tag == "Deck" or card.tag == "Card" then
-            card.setPositionSmooth(discardArea.getPosition(), false, true)
+    for _, obj in ipairs(player.playArea.getObjects()) do
+        if obj.tag == "Deck" or obj.tag == "Card" then
+            obj.setPositionSmooth(player.discardArea.getPosition())
         end
     end
 end
 
-function drawCards(player, numCards)
-    local deckArea = getObjectFromGUID(player.deckArea)
-    if not deckArea then return end
-
-    local deck = deckArea.getObjects()[1]
-    local deckRemains = 0
-    if deck then
-        deckRemains = deck.getQuantity()
-    end
-
-    if deckRemains < numCards then
-        local newDeck = cycleDiscard(player)
-        if newDeck then
-            Wait.condition(function() newDeck.deal(numCards - deckRemains, player.color) end,
-                          function() return not newDeck.isSmoothMoving() end, 3)
+function drawCards(player, toDeal)
+    local deck = findDeckInZone(player.deckArea)
+    if not deck then
+        local reshuffled = cycleDiscard(player)
+        if reshuffled then
+            Wait.condition(function()
+                reshuffled.deal(toDeal, player.color)
+            end, function()
+                return not reshuffled.isSmoothMoving()
+            end, 3)
+        else
+            print("❌ No deck or discard to draw from for " .. player.color)
         end
-    else
-        deck.deal(numCards, player.color)
+        return
     end
+
+    local qty = (deck.getQuantity and deck.getQuantity()) or 1
+    if qty >= toDeal then
+        deck.deal(toDeal, player.color)
+    else
+        local reshuffled = cycleDiscard(player)
+        if reshuffled then
+            Wait.condition(function()
+                reshuffled.deal(toDeal - qty, player.color)
+            end, function()
+                return not reshuffled.isSmoothMoving()
+            end, 3)
+        end
+        deck.deal(math.min(qty, toDeal), player.color)
+    end
+end
+
+function findDeckInZone(zoneGUID)
+    local zone = getObjectFromGUID(zoneGUID)
+    if not zone then return nil end
+    for _, obj in ipairs(zone.getObjects()) do
+        if obj.tag == "Deck" or obj.tag == "Card" then
+            return obj
+        end
+    end
+    return nil
 end
 
 function cycleDiscard(player)
-    local discardArea = getObjectFromGUID(player.discardArea)
-    local deckArea = getObjectFromGUID(player.deckArea)
-    if not discardArea or not deckArea then return nil end
+    local discardZone = getObjectFromGUID(player.discardArea)
+    if not discardZone then return nil end
 
-    local discards = discardArea.getObjects()
-    if #discards > 0 then
-        local firstCard = discards[1]
-        local otherCards = {}
+    local discards = groupCards(discardZone.getObjects())
+    if #discards == 0 then return nil end
+
+    local newDeck = discards[1]
+    if #discards > 1 then
+        local rest = {}
         for i = 2, #discards do
-            table.insert(otherCards, discards[i])
+            table.insert(rest, discards[i])
         end
-
-        local newDeck = firstCard.group(otherCards)
-        newDeck.flip()
-        newDeck.shuffle()
-        newDeck.setPositionSmooth(deckArea.getPosition())
-        return newDeck
+        newDeck = newDeck.group(rest)
     end
-    return nil
+
+    newDeck.flip()
+    newDeck.shuffle()
+    newDeck.setPositionSmooth(player.deckPos, false, true)
+    return newDeck
+end
+
+function groupCards(objs)
+    local cards = {}
+    for _, obj in ipairs(objs) do
+        if obj.tag == "Card" or obj.tag == "Deck" then
+            table.insert(cards, obj)
+        end
+    end
+    return cards
 end
 
 function refillCards()
@@ -381,27 +471,12 @@ function refillCards()
         end
     end
 end
-end
 
 --[[
 ====================================================================================================
                                     Game Event Functions
 ====================================================================================================
 ]]
-
-function dWToken()
-    local dwBag = getObjectFromGUID(DW_GUID)
-    local countBag = getObjectFromGUID(COUNT_BAG)
-    if not dwBag or not countBag then return end
-
-    local numTokens = 4 * #getSeatedPlayers()
-    local dropPosition = countBag.getPosition()
-    dropPosition.y = dropPosition.y + 5
-
-    for i = 1, numTokens do
-        dwBag.takeObject({position = dropPosition})
-    end
-end
 
 function getFamiliars(_, playerColor)
     local famDeck = getObjectFromGUID(FAM_GUID)
@@ -445,13 +520,16 @@ function playerDied(playerColor)
     broadcastToAll(deathData.msg, {r=1, g=0, b=0})
 
     local dwZone = getObjectFromGUID(DW_ZONES[playerColor])
-    local countBag = getObjectFromGUID(COUNT_BAG)
-    if not dwZone or not countBag then return end
+    local dwBag = getObjectFromGUID(DW_GUID)
+    if not dwZone or not dwBag then return end
 
     local tokenCount = #dwZone.getObjects()
     if tokenCount < #deathData.positions then
         local pos = deathData.positions[tokenCount + 1]
-        countBag.takeObject({position=pos, rotation={0,180,180}})
+        dwBag.takeObject({
+            position = pos,
+            rotation = {0, 180, 180}
+        })
     else
         broadcastToAll("Max death tokens reached for this player.", {r=1, g=0, b=0})
     end
@@ -481,12 +559,12 @@ bag = getObjectFromGUID('8de123')
 local string1 = 'Playmat'
 local string2 = 'Health'
 local wDestination1 = {23.77, 0.99, -20.69}
-local rDestination1 = {-15.20, 0.99, -20.38}
+local rDestination1 = {-27.60, 0.99, -19.92}
 local pDestination1 = {39.24, 0.99, 0.84}
 local bDestination1 = {23.36, 0.99, 20.68}
 local gDestination1 = {-15.87, 0.99, 20.28}
 local wDestination2 = {26.59, 4, -18.52}
-local rDestination2 = {-12.38, 4, -18.21}
+local rDestination2 = {-24.78, 1.06, -17.75}
 local pDestination2 = {37.07, 4, 3.66}
 local bDestination2 = {20.54, 4, 18.51}
 local gDestination2 = {-18.69, 4, 18.11}
@@ -1580,14 +1658,96 @@ end
 end
 end
 
+function selChar_Abraca(source, player)
+    if player~='Black' and player~='Grey' then
+    bag = getObjectFromGUID('e508d0')
+    local string1 = 'Playmat'
+    local string2 = 'Health'
+    local wDestination1 = {23.77, 0.99, -20.69}
+    local rDestination1 = {-15.20, 0.99, -20.38}
+    local pDestination1 = {39.24, 0.99, 0.84}
+    local bDestination1 = {23.36, 0.99, 20.68}
+    local gDestination1 = {-15.87, 0.99, 20.28}
+    local wDestination2 = {26.59, 4, -18.52}
+    local rDestination2 = {-12.38, 4, -18.21}
+    local pDestination2 = {37.07, 4, 3.66}
+    local bDestination2 = {20.54, 4, 18.51}
+    local gDestination2 = {-18.69, 4, 18.11}
+
+    local objects = bag.getObjects()
+    local result = {}
+    local result2 = {}
+
+
+    if objects ~= nil then
+    for _, v in ipairs(objects) do
+    if string.find(v.name, string1) then
+    table.insert(result, v.guid)
+    end
+    end
+
+    if objects ~= nil then
+    for _, c in ipairs(objects) do
+    if string.find(c.name, string2) then
+    table.insert(result2, c.guid)
+    end
+    end
+
+
+    if result ~= nil then
+    for _, v in ipairs(result) do
+    if player == 'White' then
+    bag.takeObject({guid = v, position = wDestination1}) else
+    if player == 'Red' then
+    bag.takeObject({guid = v, position = rDestination1}) else
+    if player == 'Purple' then
+    bag.takeObject({guid = v, rotation = {0,90,0}, position = pDestination1}) else
+    if player == 'Blue' then
+    bag.takeObject({guid = v, rotation = {0,0,0}, position = bDestination1}) else
+    if player == 'Green' then
+    bag.takeObject({guid = v, rotation = {0,0,0}, position = gDestination1})
+    end
+    end
+    end
+    end
+    end
+    end
+    end
+
+
+
+    if result ~= nil then
+    for _, c in ipairs(result2) do
+    if player == 'White' then
+    bag.takeObject({guid = c, position = wDestination2}) else
+    if player == 'Red' then
+    bag.takeObject({guid = c, position = rDestination2}) else
+    if player == 'Purple' then
+    bag.takeObject({guid = c, rotation = {0,90,0}, position = pDestination2}) else
+    if player == 'Blue' then
+    bag.takeObject({guid = c, rotation = {0,0,0}, position = bDestination2}) else
+    if player == 'Green' then
+    bag.takeObject({guid = c, rotation = {0,0,0}, position = gDestination2})
+    end
+    end
+    end
+    end
+    end
+    end
+    end
+
+    end
+    end
+
+
+    end
+    end
+
 function setupCharacterButtons()
-    print("setupCharacterButtons called.")
     for _, charData in ipairs(CHARACTERS) do
         local charBag = getObjectFromGUID(charData.guid)
         if charBag then
-            print("Found character bag: " .. charData.name .. " (" .. charData.guid .. ")")
             if charBag.getPosition().x < 55 then
-                print("Condition met for " .. charData.name .. ". Creating button.")
                 charBag.createButton({
                     label="Select character",
                     tooltip=charData.name,
@@ -1600,138 +1760,10 @@ function setupCharacterButtons()
                     font_size=160
                 })
             else
-                print("Condition NOT met for " .. charData.name .. ". X position: " .. charBag.getPosition().x)
             end
         else
-            print("Character bag NOT found for: " .. charData.name .. " (GUID: " .. charData.guid .. ")")
         end
     end
-end
-
---[[
-====================================================================================================
-                                    Counting Bag (Preserved 1-to-1)
-====================================================================================================
-]]
-
-valueVariable = "value"
-valueDescription = "Value[%p%s]+(%d+)[^%d%a]*"
-itemValues = { ["Coin 1"] = 1, ["Coin 5"] = 5 }
-valueName = "Coin[%p%s]+(%d+)[^%d%a]*"
-value = 0
-containedObjectValues = { }
-checkFrequency = 1
-isActive = false
-isRunning = false
-isCounting = false
-isLockedBeforeCounting = false
-isLockedUntil = false
-
-function updateSave()
-  local data_to_save = {["containedObjectValues"] = containedObjectValues}
-  saved_data = JSON.encode(data_to_save)
-  self.script_state = saved_data
-  return saved_to_save
-end
-
-function updateBag()
-  isRunning = true
-  while isRunning do
-    countItems()
-    if isLockedUntil ~= false and os.time() > isLockedUntil then
-      self.setLock(isLockedBeforeCounting)
-      isLockedBeforeCounting = false
-    end
-    wait(checkFrequency)
-  end
-  coroutine.yield(1)
-end
-
-function onDestroy()
-  isRunning = false
-end
-
-function getValue(object)
-  local v = 0
-  local varerr, var = pcall(object.getVar, valueVariable)
-  local descerr, i, j, descVal = pcall(string.find, object.getDescription(), valueDescription)
-  local tableEntry = itemValues[object.getName()]
-  local nameerr, i, j, nameVal = pcall(string.find, object.getName(), valueName)
-  if varerr and var ~= nil and tonumber(var) ~= nil then
-    v = tonumber(var)
-  elseif descerr and descVal ~= nil then
-    v = descVal
-  elseif tableEntry ~= nil and tonumber(tableEntry) ~= nil then
-    v = tonumber(tableEntry)
-  elseif nameerr and nameVal ~= nil then
-    v = nameVal
-  end
-
-  local stack = 1
-  local stackerr, q = pcall(object.getQuantity)
-  if stackerr and object.tag ~= "Bag" then
-    stack = math.abs(q)
-  end
-  return v * stack
-end
-
-function onObjectLeaveContainer(container, leave_object)
-  if container.getGUID() == COUNT_BAG then
-    containedObjectValues[leave_object.guid] = nil
-    updateValue()
-  end
-end
-
-function onCollisionEnter(c)
-  if c.collision_object.getGUID() == COUNT_BAG and self.resting then
-    v = getValue(c.collision_object)
-    containedObjectValues[c.collision_object.getGUID()] = v
-    updateValue()
-  end
-end
-
-function updateValue()
-  local totalValue = 0
-  for id, val in pairs(containedObjectValues) do
-    totalValue = totalValue + val
-  end
-  if totalValue == nil then totalValue = 0 end
-  value = totalValue
-  local countBag = getObjectFromGUID(COUNT_BAG)
-  if countBag then
-      countBag.editButton({index=0, label=tostring(value)})
-  end
-end
-
-function countItems()
-    local countBag = getObjectFromGUID(COUNT_BAG)
-    if not countBag then return end
-    if isCounting == true then return end
-    isCounting = true
-    if isLockedUntil == false then
-      isLockedBeforeCounting = countBag.getLock()
-    end
-    local itemsInBag = countBag.getObjects()
-    local seenGUIDs = {}
-    for index, obj in ipairs(itemsInBag) do
-      if containedObjectValues[obj.guid] == nil or seenGUIDs[obj.guid] == true then
-        countBag.setLock(true)
-        isLockedUntil = os.time() + 2
-        countBag.takeObject({
-          ['guid'] = obj.guid,
-          ['position'] =  {countBag.getPosition().x, countBag.getPosition().y + 4, countBag.getPosition().z}
-        })
-      end
-      seenGUIDs[obj.guid] = true
-    end
-
-    for id, val in pairs(containedObjectValues) do
-      if seenGUIDs[id] ~= true then
-        containedObjectValues[id] = nil
-      end
-    end
-    updateValue()
-    isCounting = false
 end
 
 function wait(time)
